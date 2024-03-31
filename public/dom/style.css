@@ -8,7 +8,7 @@
 body {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-image: url("../../imagenes/image1.jpg");
+    background-image: url("../imagenes/image1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
