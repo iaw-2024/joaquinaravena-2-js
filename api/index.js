@@ -13,6 +13,12 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs');
 app.set('views', dir);  
 
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+module.exports = app;
+
 app.get('/express/', (req, res) => {
   const data = {
       arqueros: arqueros,
@@ -23,9 +29,18 @@ app.get('/express/', (req, res) => {
   res.render('index', data);
 });
 
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
+app.get('/arqueros', (req, res) => {
+  res.json({ arqueros });
 });
-module.exports = app;
+
+app.get('/defensores', (req, res) => {
+  res.json({ defensores });
+});
+
+app.get('/mediocampistas', (req, res) => {
+  res.json({ mediocampistas });
+});
+
+app.get('/delanteros', (req, res) => {
+  res.json({ delanteros });
+});

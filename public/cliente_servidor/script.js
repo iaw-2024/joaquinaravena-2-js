@@ -1,5 +1,5 @@
 
-const localhost = 'http://localhost:3002';
+const localhost = 'http://localhost:3001';
 window.onload = function() {
     fetch(localhost+'/arqueros')
         .then(response => response.json())
