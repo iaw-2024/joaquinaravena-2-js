@@ -13,14 +13,26 @@
     <main>
         <section class="column">
             <ul class="posicion" id="arqueros">Arqueros
+                <% arqueros.forEach(arquero => { %>
+                    <li><%= arquero %></li>
+                <% }); %>   
             </ul>
             <ul class="posicion" id="defensores">Defensores
+                <% defensores.forEach(defensor => { %>
+                    <li><%= defensor %></li>
+                <% }); %>   
             </ul>
         </section>
         <section class="column">
             <ul class="posicion" id="mediocampistas">Mediocampistas
+                <% mediocampistas.forEach(mediocampista => { %>
+                    <li><%= mediocampista %></li>
+                <% }); %>
             </ul>
             <ul class="posicion" id="delanteros">Delanteros
+                <% delanteros.forEach(delantero => { %>
+                    <li><%= delantero %></li>
+                <% }); %>
             </ul>
         </section>      
     </main>
@@ -28,5 +40,4 @@
         <a href="/">Volver</a>
     </footer>
 </body>
-    <script src="script.js"></script>
 </html>
