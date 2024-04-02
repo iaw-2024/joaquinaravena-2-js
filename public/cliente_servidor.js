@@ -1,7 +1,5 @@
-
-const localhost = 'http://localhost:3001';
 window.onload = function() {
-    fetch(localhost+'/arqueros')
+    fetch('/arqueros')
         .then(response => response.json())
         .then(data => {
             const listaArqueros = document.getElementById('arqueros');
@@ -14,7 +12,7 @@ window.onload = function() {
         .catch(error => {
             console.error('Error al obtener los datos del servidor:', error);
         });
-    fetch(localhost+'/defensores')
+    fetch('/defensores')
         .then(response => response.json())
         .then(data => {
             const listaDefensores = document.getElementById('defensores');
@@ -28,7 +26,7 @@ window.onload = function() {
             console.error('Error al obtener los datos del servidor:', error);
         });
 
-    fetch(localhost+'/mediocampistas')
+    fetch('/mediocampistas')
         .then(response => response.json())
         .then(data => {
             const listaMediocampistas = document.getElementById('mediocampistas');
@@ -42,7 +40,7 @@ window.onload = function() {
             console.error('Error al obtener los datos del servidor:', error);
         });
     
-    fetch(localhost+'/delanteros')
+    fetch('/delanteros')
         .then(response => response.json())
         .then(data => {
             const listaDelanteros = document.getElementById('delanteros');
