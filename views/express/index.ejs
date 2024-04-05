@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formación</title>
-    <link rel="stylesheet" href="/../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,14 +13,26 @@
     <main>
         <section class="column">
             <ul class="posicion" id="arqueros">Arqueros
+                <% arqueros.forEach(arquero => { %>
+                    <li><%= arquero %></li>
+                <% }); %>   
             </ul>
             <ul class="posicion" id="defensores">Defensores
+                <% defensores.forEach(defensor => { %>
+                    <li><%= defensor %></li>
+                <% }); %>   
             </ul>
         </section>
         <section class="column">
             <ul class="posicion" id="mediocampistas">Mediocampistas
+                <% mediocampistas.forEach(mediocampista => { %>
+                    <li><%= mediocampista %></li>
+                <% }); %>
             </ul>
             <ul class="posicion" id="delanteros">Delanteros
+                <% delanteros.forEach(delantero => { %>
+                    <li><%= delantero %></li>
+                <% }); %>
             </ul>
         </section>      
     </main>
@@ -28,6 +40,4 @@
         <a href="/">Volver</a>
     </footer>
 </body>
-</html> 
-
-<script src="../dom/dom.js"></script>
+</html>
